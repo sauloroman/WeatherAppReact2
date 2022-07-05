@@ -53,7 +53,7 @@ const WeatherCard = ({ mensaje, result, isValidData }) => {
           <div className="weather__card">
             <div className="weather__error">
               <p>{ mensaje }</p>
-              <img src="/src/img/icons8-sad-50.png" alt="Cara triste" />
+              <img src="./src/img/icons8-sad-50.png" alt="Cara triste" />
             </div>
           </div>
         )
