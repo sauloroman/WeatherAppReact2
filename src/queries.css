@@ -36,6 +36,7 @@
     grid-template-columns: unset;
     grid-template-rows: repeat(2, 1fr);
     height: 100vh;
+    gap: 0;
   }
 
   .weather__card {
@@ -88,6 +89,7 @@
 
   .form__description p {
     font-size: 2rem;
+    margin-bottom: 5rem;
   }
 
   .weather__error {
