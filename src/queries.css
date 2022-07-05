@@ -28,6 +28,10 @@
     font-size: 40%;
   }
 
+  .container {
+    max-width: 100%;
+  }
+
   .header__text {
     font-size: 2rem;
   }
@@ -105,10 +109,6 @@
 }
 
 @media ( max-width: 25em ) {
-  .container {
-    max-width: 100%;
-  }
-
 
   .icon {
     width: 5rem;
