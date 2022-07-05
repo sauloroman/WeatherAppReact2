@@ -1,0 +1,362 @@
+:root {
+  --bg-color: #bfd3d5;
+  --bg-card-color: #dde4e6;
+  --color-white: #fff;
+  --color-black: #192221;
+  --color-gray: #efefef;
+  --color-primary: #27737d;
+  --color-secondary: #eeb12d;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  font-size: 1.6rem;
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100vh;
+  color: var(--color-black);
+}
+
+.container {
+  margin: 0 auto;
+  width: 120rem;
+  max-width: 90%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather {
+  padding: 3rem;
+  width: 90rem;
+  height: 60rem;
+  background-color: var(--color-gray);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+
+.form {
+  position: relative;
+  padding-left: 5rem;
+}
+
+.form__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.header__icon {
+  width: 3.5rem;
+}
+
+.header__text {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.header__text span {
+  color: #35c1f1;
+}
+
+.icon {
+  position: absolute;
+}
+
+.icon--1 {
+  width: 6rem;
+  top: 85%;
+  left: 80%;
+  opacity: 0.3;
+}
+
+.icon--2 {
+  top: 22%;
+  left: 75%;
+}
+
+.icon--3 {
+  top: 45%;
+  right: -15%;
+  filter: blur(1px);
+  opacity: 0.7;
+}
+
+.icon--4 {
+  top: 15%;
+  left: 1%;
+  width: 3rem;
+}
+
+.form__description {
+  margin-bottom: 3rem;
+}
+
+.form__description h1 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  margin-bottom: 2rem;;
+}
+
+.form__description p {
+  line-height: 1.5;
+  font-size: 1.4rem;
+  color: #808686;
+}
+
+.form__field {
+  margin-bottom: 2rem;
+}
+
+.form__field label {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 700;
+}
+
+.form__field input,
+.form__field select {
+  width: 80%;
+  padding: 1rem;
+  color: #808686;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+  font-family: inherit;
+  background-color: #efefef;
+}
+
+.form__field input:focus,
+.form__field select:focus {
+  box-shadow: inset 0 0 0 3px #27737dc2;
+}
+
+.form__submit {
+  font-family: inherit;
+  padding: 1rem 2rem;
+  border: none;
+  color: var(--color-white);
+  border-radius: 5px;
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.weather__container {
+  background-color: var(--bg-card-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.weather__card {
+  width: 80%;
+  height: 80%;
+  background-color: var(--color-primary);
+  padding: 2rem;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 2;
+  color: #f4f7f8;
+  font-weight: 300;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.weather__error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+}
+
+.weather__error p {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.weather__header {
+  text-align: center;
+}
+
+.weather__header h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.weather__features {
+  border-top: 1px solid currentColor;
+  padding-top: 2rem;
+  margin-top: auto;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.temperatureBox {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.temperature {
+  font-weight: 400;
+  font-size: 6rem;
+}
+
+.temperature__name {
+  font-weight: 700;
+}
+
+.weather__icon {
+  width: 7rem;
+}
+
+.temperatures {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.weather__icon-features {
+  width: 3rem;
+}
+
+.humidity, .wind {
+  border-right: 1px solid currentColor;
+  justify-self: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.wind {
+  border: none;
+}
+
+.layout {
+  background-color: var(--color-secondary);
+  width: 75%;
+  border-radius: 20px;
+  height: 75%;
+  position: absolute;
+  z-index: 1;
+  transform: rotate(15deg);
+}
+
+.sk-folding-cube {
+  display: block;
+
+  margin: 20px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); 
+}
+.sk-folding-cube .sk-cube:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary);
+  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+          animation: sk-foldCubeAngle 2.4s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+          transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+          transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  } 
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  }
+}
