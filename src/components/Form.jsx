@@ -1,4 +1,8 @@
 import icon1 from '../img/icons8-haze-48.png';
+import icon2 from '../img/icons8-autumn-48.png';
+import icon3 from '../img/icons/clouds.png';
+import icon4 from '../img/icons8-spring-48.png';
+import icon5 from '../img/icons8-winter-48.png';
 
 const Form = ({
   city,
@@ -79,10 +83,10 @@ const Form = ({
       </form>
 
       {/* ICONS */}
-      <img src="/src/img/icons8-autumn-48.png" alt="Weather icon" className="icon icon--1"/>
-      <img src="/src/img/icons/clouds.png" alt="Weather icon" className="icon icon--2"/>
-      <img src="/src/img/icons8-spring-48.png" alt="Weather icon" className="icon icon--3"/>
-      <img src="/src/img/icons8-winter-48.png" alt="Weather icon" className="icon icon--4"/>
+      <img src={icon2} alt="Weather icon" className="icon icon--1"/>
+      <img src={icon3} alt="Weather icon" className="icon icon--2"/>
+      <img src={icon4} alt="Weather icon" className="icon icon--3"/>
+      <img src={icon5} alt="Weather icon" className="icon icon--4"/>
     </div>
   )
 }
