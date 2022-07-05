@@ -1,3 +1,5 @@
+import icon1 from '../img/icons8-haze-48.png';
+
 const Form = ({
   city,
   setCity,
@@ -30,7 +32,7 @@ const Form = ({
 
       <header className="form__header">
         <div className="iconBox">
-          <img src="/src/img/icons8-haze-48.png" alt="Weather icon" className="header__icon" />
+          <img src={icon1} alt="Weather icon" className="header__icon" />
         </div>
         <p className="header__text">Weather<span>app</span></p>
       </header>
