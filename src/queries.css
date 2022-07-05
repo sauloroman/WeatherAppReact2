@@ -102,13 +102,14 @@
   .form__submit {
     font-size: 2rem;
     width: 80%;
-    padding: 1.3rem 0;
+    padding: 1.8rem 0;
   }
 
   .form__field input,
   .form__field select,
   .form__field label {
     font-size: 2rem;
+    padding: 1.8rem 1rem;
   }
 }
 
