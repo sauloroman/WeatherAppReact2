@@ -24,6 +24,7 @@ const Form = ({
 
   }
 
+
   return (
     <div className="form">
 
@@ -68,7 +69,11 @@ const Form = ({
           </select>
         </div>
 
-        <input type="submit" className="form__submit" value="Obtener el clima"/>
+        <input 
+          type="submit" 
+          className="form__submit" 
+          value="Obtener el clima"/>
+
       </form>
 
       {/* ICONS */}
