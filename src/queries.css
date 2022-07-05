@@ -28,10 +28,6 @@
     font-size: 40%;
   }
 
-  .container {
-    max-width: 100%;
-  }
-
   .header__text {
     font-size: 2rem;
   }
@@ -39,7 +35,7 @@
   .weather {
     grid-template-columns: unset;
     grid-template-rows: repeat(2, 1fr);
-    height: auto;
+    height: 100vh;
   }
 
   .weather__card {
@@ -91,7 +87,7 @@
   }
 
   .form__description p {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .weather__error {
@@ -105,6 +101,12 @@
     font-size: 2rem;
     width: 80%;
     padding: 1.3rem 0;
+  }
+
+  .form__field input,
+  .form__field select,
+  .form__field label {
+    font-size: 2rem;
   }
 }
 
